@@ -1,0 +1,44 @@
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#particles-target {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    z-index: -1;
+}
+
+.text {
+    padding-top: 150px;
+}
+
+h1, h3, h5 {
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 96px;
+    font-family: 'Ma Shan Zheng', cursive;
+}
+
+h3, h5 {
+    font-family: 'Pangolin', cursive;
+}
+
+a {
+    color: #ccc;
+}
+
+a:hover, a:active {
+    color: #bbb;
+    text-decoration: none;
+}

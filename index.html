@@ -1,0 +1,50 @@
+<html lang="en">
+    <head>
+        <title>MoonGlade - A Minecraft Server</title>
+        <meta charset="utf-8">
+        <link href="https://fonts.googleapis.com/css?family=Ma+Shan+Zheng|Pangolin&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css" integrity="sha256-PHcOkPmOshsMBC+vtJdVr5Mwb7r0LkSVJPlPrp/IMpU=" crossorigin="anonymous" />
+        <link rel="stylesheet" href="site.css">
+    </head>
+    <body>
+        <div id="particles-target"></div>
+        <div class="container">
+            <div class="text mx-auto my-auto">
+                <h1 class="title animated fadeInLeft">MoonGlade</h1>
+                <div class="animated bounceIn delay-1s">
+                    <h3>1.15.1 &bull; Friendly Community &bull; Community Run</h3>
+                    <h5>Server IP: <a href="#" data-clipboard-target="#server-ip" class="clipboard-target" data-toggle="tooltip" data-trigger="manual" title="Copied! Now head over to Minecraft!"><span id="server-ip">play.moongla.de</span></a></h5>
+                    <h5>Discord: <a href="https://discord.gg/x6u3q7A" target="_blank">discord.gg/x6u3q7A</a></h5>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+        <script src="particles.min.js"></script>
+        <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+
+            $(document).ready(function() {
+                var tooltip = $('[data-toggle="tooltip"]');
+                tooltip.tooltip();
+
+                var clip = new ClipboardJS('.clipboard-target');
+                clip.on('success', function(e) {
+                    tooltip.tooltip('show');
+
+                    setTimeout(function() {
+                        tooltip.tooltip('hide');
+                    }, 5000);
+                })
+
+                particlesJS.load('particles-target', 'particles.json');
+            });
+        </script>
+    </body>
+</html>
