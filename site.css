@@ -26,8 +26,12 @@ h1, h3, h5 {
 }
 
 h1 {
-    font-size: 96px;
+    font-size: 80px;
     font-family: 'Ma Shan Zheng', cursive;
+}
+
+h3 {
+    font-size: 22px;
 }
 
 h3, h5 {
@@ -41,4 +45,14 @@ a {
 a:hover, a:active {
     color: #bbb;
     text-decoration: none;
+}
+
+@media (min-width: 576px) {
+    h1 {
+        font-size: 96px;
+    }
+
+    h3 {
+        font-size: 26px;
+    }
 }
